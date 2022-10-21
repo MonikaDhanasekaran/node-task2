@@ -11,6 +11,10 @@ const app = express();
 
 app.use(express.json());  
 
+app.get("/", (req, res) =>
+  res.send(`Server Running`)
+);
+
 app.use("/room",roomRouter);
 
 app.use("/booked",bookedRouter);
